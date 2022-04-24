@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+
+</head>
+
+<body >
+
+  <div id="calculator_box">
+    <div id="header">
+      <div id="title">calc</div>
+      <div id="theme">
+        <h6>theme</h6>
+        <div id="theme_box">
+          <div id="theme_options">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div id="theme_switch" >
+            <span class="ball" id="ball1" onclick="themeSwitch (1)"></span>
+            <span class="ball" id="ball2" onclick="themeSwitch (2)"></span>
+            <span class="ball" id="ball3" onclick="themeSwitch (3)"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="screen"></div>
+    <div id="keypad">
+      <div class="btn number_btn" onclick="addNumber(7)">7</div>
+      <div class="btn number_btn" onclick="addNumber(8)">8</div>
+      <div class="btn number_btn" onclick="addNumber(9)">9</div>
+      <div class="btn command" id="del" onclick="deleteNumber ()">del</div>
+      <div class="btn number_btn" onclick="addNumber(4)">4</div>
+      <div class="btn number_btn" onclick="addNumber(5)">5</div>
+      <div class="btn number_btn" onclick="addNumber(6)">6</div>
+      <div class="btn operation_btn" onclick="operationType ('+')">+</div>
+      <div class="btn number_btn" onclick="addNumber(1)" >1</div>
+      <div class="btn number_btn" onclick="addNumber(2)">2</div>
+      <div class="btn number_btn" onclick="addNumber(3)">3</div>
+      <div class="btn operation_btn" onclick="operationType ('-')">-</div>
+      <div class="btn number_btn" onclick="addNumber('.')">.</div>
+      <div class="btn number_btn" onclick="addNumber(0)">0</div>
+      <div class="btn operation_btn" onclick="operationType ('/')">/</div>
+      <div class="btn operation_btn" onclick="operationType ('x')">x</div>
+      <div class="btn command" id="reset" onclick="reset()">reset</div>
+      <div class="btn" id="equal" onclick="displayResult()">=</div>
+    </div>
+  </div>
+
+  <script src="/Script/main.js" type="text/javascript"></script>
+</body>
+
+</html>
