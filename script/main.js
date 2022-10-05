@@ -1,6 +1,6 @@
 //cambiar de tema
 const body = document.getElementsByTagName("body")[0];
-//let t = 1;
+
 let prefer = Number(localStorage.getItem ("theme"))
 
 themeSwitch (prefer)
@@ -51,15 +51,22 @@ let result;
 
 
 function addNumber (num){
-    if(lastEnter.includes(".") && num==".") return;
+    if(lastEnter.includes(".") && num=="." && !result) return;
+    if(result){
+        lastEnter=""
+        result= ""
+        displayScreen('')
+    }
     lastEnter = String(lastEnter) + String(num);
     displayScreen (lastEnter);
 }
 
 function operationType (op){
-    if(lastEnter === "") {return;}
+    
+    if(lastEnter === "") return
     if(firstEnter != ""){
         calc();
+        displayScreen (result)
     }
     operation = String(op);
     firstEnter = lastEnter;
@@ -88,8 +95,11 @@ function calc (){
         case "/":
             result = firstNumber / lastNumber;
             break;
+        default:
+            result = lastEnter
     }
     
+    result = String(result)
     lastEnter = String(result);
     operation = undefined;
     firstEnter = "";
@@ -97,7 +107,7 @@ function calc (){
 }
 
 function displayScreen (n){
-    screenBox.textContent = n;
+    screenBox.textContent = n.substring(0,15);
 }
 
 function reset(){
