@@ -1,4 +1,4 @@
-# Title
+# Calculator app
 
 [![theme1.png](https://i.postimg.cc/QtgQ2dCV/theme1.png)](https://postimg.cc/6234RwdN)
 
